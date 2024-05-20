@@ -1,6 +1,1 @@
-foo=`find -name 'foo.txt'`
-bar=`find -name 'bar.txt'`
-baz=`find -name 'baz.txt'`
-cat $foo
-cat $bar
-cat $baz
+find . -type f \( -name "foo.txt" -o -name "bar.txt" -o -name "baz.txt" \) -exec cat {} \;
